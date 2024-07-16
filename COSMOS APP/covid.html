@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body{
+    background-color: #dcdfce;
+    
+  }
+  #navbar{
+    height: 100px;
+    width: 69.3%;
+    /* border: 1px solid black; */
+    margin: auto;
+  }
+  #main{
+    height: 2000px;
+    width: 69%;
+    /* border: 1px solid black; */
+    margin: auto;
+    background-color:white;
+    margin-top: 25px;
+  }
+ #head{
+            height:120px;
+            width: 69.3%;
+            position: fixed;
+            top: 0;
+            /* flex-wrap: wrap; */
+            display: flex;
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            
+            
+            
+        }
+        #dummy{
+            height:140px;
+            width:100%;
+            
+        }
+        #head > .headL{
+            width:30%;
+            display: flex;
+            /* flex-wrap: wrap; */
+        }
+        .headL > img{
+            width: 90px;
+            height: 90px;
+            margin: 10px;
+        }
+         .headR{
+            width:70%;
+            display: flex;
+            margin-left:33%;
+
+           
+            /* height:100% */
+        }
+        .headR > div{
+            margin: 10px;
+            width: 15%;
+            height: 80%;
+            flex-wrap: wrap;
+        }
+        .navIMG{
+            width: 100px;
+            border: none;
+        }
+        .navIMG:hover{
+            border-bottom:2px solid teal;
+        }
+        .navL{
+            border:none;
+           
+        }
+        .navL:hover{
+            border-bottom:2px solid teal;
+        }
+        .navL > h5{
+            color:rgb(2,71,91);
+            border-bottom: 1px solid;
+         
+        }
+        .navL > p{
+            color:rgb(121, 160, 173);
+            font-size: 13px;
+            margin-top: -16px;
+        }
+        .navlogo{
+            width: 60%;
+            height: 70%;
+           
+            margin-top: 15px;
+            margin-left: 20px;
+        }
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;height: 400px;width: 85%;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 45px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 60%;
+  width: 100%;
+  text-align:left;
+}
+.text2{
+  color: #f2f2f2;
+  font-size: 25px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 52%;
+  width: 100%;
+  text-align: left;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.nextpage{
+  width: 15%;
+  margin-top: -50px;
+  margin-left: 10%;
+  /* border:1px solid purple */
+}
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+ 
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+#editor{
+  /* margin-top: 800px; */
+  margin: 8px 2.5% ;
+  height: 300px;
+  width: 95%;
+  /* border: 1px solid red; */
+  display: flex;
+}
+.e1{
+  height: 100%;
+  width: 48%;
+  /* border: 1px solid green; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 15px;
+}
+.e2{
+  height: 100%;
+  width: 50%;
+  /* border: 1px solid green; */
+  margin-left: 25px;
+}
+.f{
+  height: 47%;
+  width: 100%;
+  /* border: 1px solid yellow; */
+  display: flex;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 15px;
+}
+.p1{
+  font-family: Verdana, sans-serif;
+  font-size: 20px;
+}
+.e33{
+  height: 50%;
+  width: 100%;
+  /* border: 1px solid blue; */
+}
+.i{
+  height: 100%;
+  width: 45%;
+  /* border: 1px solid green; */
+}
+.i2{
+  height: 100%;
+  width: 53%;
+  /* border: 1px solid green; */
+  margin-left: 10px;
+}
+.EP{
+  font-family: Verdana, sans-serif;
+  font-size: 25px;
+  margin-left: 2.5%;
+  margin-top: 35px;
+  color:#02479b;
+}
+.btn{
+  /* border: 1px solid green; */
+  width:15%;
+  height: 40px;
+  margin: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.btn>button{
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  border: 0;
+}
+.box2{
+  margin: 8px 2.5% ;
+  height: 1000px;
+  width: 95%;
+  border: 1px solid white;
+  
+}
+.LA{
+  margin-left: 3%;
+}
+.boxin{
+  width: 100%;
+  height: 300px;
+  /* border: 1px solid yellow; */
+  margin-top: 20px;
+  display: flex;
+}
+.boxin2{
+  width: 32%;
+  height: 100%;
+  /* border: 1px solid teal; */
+  margin-left: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+p{
+  font-size: 10px;
+  text-align: justify;
+  margin-top: -1px;
+  color:#02479b;
+  margin-left: 3px;
+  margin-right: 5px;
+  font-family: Verdana, sans-serif;
+}
+h5,h4{
+  color:#02479b;
+  font-family: Verdana, sans-serif;
+}
+
+</style>
+</head>
+<body>
+  <div id="navbar">
+  <div id="head" >
+    <div class="headL">
+        <img src="/COSMOS APP/Cosmoslogo.jpg"/>
+    </div>
+    <div  class="headR" >
+        <button onclick="window.location.href='doctors.html'" class="navL">
+            <h5>DOCTORS</h5>
+            <p>Consult <br> Online</p>
+        </button>
+        <button onclick="window.location.href='pharmacy.html'" class="navL" style="width: 100px;">
+           <h5>PHARMACY</h5>
+           <p>Medicines & other product</p>
+        </button>
+        <button onclick="window.location.href='labtests.html'" class="navL">
+           <h5>LAB TEST</h5>
+           <p>Health<br>check-ups</p>
+        </button>
+        <button class="navL">
+           <h5>COVID-19</h5>
+           <p>Latest<br>updates</p>
+        </button>
+        <button onclick="window.location.href='cart.html'" class="navIMG">
+            <img class="navlogo" src="https://thumbs.dreamstime.com/b/high-quality-dark-blue-shopping-cart-icon-high-quality-dark-blue-shopping-cart-icon-pictogram-icon-set-illustration-useful-web-192534364.jpg"/>
+        </button>
+        <button onclick="window.location.href='signup.html'" class="navIMG">
+            <img class="navlogo" src="data:image/png;base64,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"/>
+        </button>
+    </div>
+</div>
+</div>
+
+  <div id="main">
+    
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="https://newassets.apollo247.com/cms/2022-01/omicron-Hero-Banner_1.jpg" style="width:100%">
+  <div class="text">Omnicron Fact File:All You Need to Know</div>
+  <div class="text2">Get the latest information on the COVID-19 third wave in India.</div>
+ 
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="https://newassets.apollo247.com/cms/2022-01/calendarbannerfinal.jpg" style="width:100%">
+  <div class="text">Omnicron Fact File:All You Need to Know</div>
+  <div class="text2">Get the latest information on the COVID-19 third wave in India.</div>
+  
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="https://newassets.apollo247.com/cms/2021-12/winterbanner.jpg" style="width:100%">
+  <div class="text">Omnicron Fact File:All You Need to Know</div>
+  <div class="text2">Get the latest information on the COVID-19 third wave in India.</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+<div class="nextpage "style="text-align:left;">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+</div>
+<div class="EP">Editor's Pick</div>
+<div id=editor>
+  <div class="e1">
+    <img style="height: 70%;width: 100%;border-radius:15px ;" src="https://newassets.apollo247.com/cms/2022-01/booster1064x500.jpg" alt="">
+    <p class="p1">Can a Booster Dose Protect Against Omicron</p>
+    <p >By Apollo 24/7,Publeshed on 04 January 2022</p>
+    
+  </div>
+  <div class="e2">
+    <div class="f">
+      <div class="i">
+        <img style="height: 100%;width: 100%;border-radius: 15px;" src="https://newassets.apollo247.com/cms/2021-12/Intermittent1064x500.jpg" alt="">
+      </div>
+      <div class="i2">
+        <p class="p1">Does intermittent Fasting Help with Weight Loss </p>
+        <p>21 December 2021</p>
+
+      </div>
+    </div>
+    <div class="f">
+      <div class="i">
+        <img style="height: 100%;width: 100%;border-radius: 15px;" src="https://newassets.apollo247.com/cms/2021-12/rtpcr1064x500.jpg" alt="">
+      </div>
+      <div class="i2">
+        <p class="p1">Can RT-PCR Tests Detect the Omicron Strain?</p>
+        <p>By Apollo 24/7,Publeshed on 04 January 2022</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="btn">
+<button>VIEW MORE</button>
+</div>
+<div class="LA">
+  <h4>Latest Article</h4>
+</div>
+<div class="box2">
+  <div class="boxin">
+    <div class="boxin2">
+      <img style="width: 100%;height: 50%;border-radius: 5px;" src="	https://newassets.apollo247.com/cms/2022-01/Oral_Conntraceptive_Pills.jpg" alt="">
+      <p>Women's Wellness</p>
+      <h5>Oral Contraceptive Pills May Increase the Risk of Breast Cancer </h5>
+      <p>The exact reason for breast cancer is not known yet. However, scientists suspect hormonal contraception to be one of the factors that may increase the risk of developing the disease. </p>
+    </div>
+    <div class="boxin2">
+      <img style="width: 100%;height: 50%;border-radius: 5px;"  src="https://newassets.apollo247.com/cms/2022-01/ANC_Profile.jpg" alt="">
+      <p>Women's Wellness</p>
+      <h5>Why Are ANC Profile Tests Recommended for Pregnant Women?</h5>
+      <p>ANC profile tests are recommended during the first trimester of pregnancy. The tests help determine whether the mother has any medical condition that may interfere with the normal growth and development of the fetus. </p>
+    </div>
+    <div class="boxin2">
+      <img style="width: 100%;height: 50%;border-radius: 5px;"  src="	https://newassets.apollo247.com/cms/2022-01/COVID_Brain_Damage.jpg" alt="">
+      <p>Coronavirus Updates</p>
+      <h5>COVID-19 May Cause Brain Damage, Studies Show</h5>
+      <p>Several cases of neurological damage have been reported in COVID-19 patients across the world. Scientists believe that brain damage could either be due to the virus or the inflammation that occurs in response to the virus.</p>
+    </div>
+  </div>
+  <div class="boxin">
+    <div class="boxin2">
+      <img  style="width: 100%;height: 50%;border-radius: 5px;"  src="	https://newassets.apollo247.com/cms/2022-01/17012022_Sensitive_teeth.jpg" alt="">
+      <p>Oral & Dental</p>
+      <h5>4 Foods to Avoid If You Have Sensitive Teeth</h5>
+      <p>Tooth sensitivity occurs when the middle layer of the teeth (known as dentin) gets exposed due to wear, tear, and erosion. The problem can worsen following intake of certain foods that create acid in the mouth. </p>
+    </div>
+    <div class="boxin2">
+      <img style="width: 100%;height: 50%;border-radius: 5px;" src="https://newassets.apollo247.com/cms/2022-01/memoryloss.jpg" alt="">
+      <p>Mental Health</p>
+      <h5>Can Depression Cause Memory Loss?</h5>
+      <p>Depression is a mental health disorder that can affect memory and cognitive abilities. This article addresses how depression affects brain function, concentration, and the ability to remember things.</p>
+    </div>
+    <div class="boxin2">
+      <img style="width: 100%;height: 50%;border-radius: 5px;" src="	https://newassets.apollo247.com/cms/2022-01/Remdesivir1064x500.jpg" alt="">
+      <p>Coronavirus Updates</p>
+      <h5>Understanding the Controversy Surrounding Remdesivir</h5>
+      <p>Remdesivir is widely prescribed to hospitalized patients with mild-to-severe COVID 19. However, the WHO has advised against the use of this drug on COVID-19 patients.  </p>
+    </div>
+  </div>
+  <div class="boxin">
+    <div class="boxin2">
+      <img style="width: 100%;height: 50%;border-radius: 5px;" src="https://newassets.apollo247.com/cms/2022-01/foodmood1064x500.jpg" alt="">
+      <p>Mental Health</p>
+      <h5>Food and Mood: More Connected than You Think</h5>
+      <p>Our brain requires several dietary nutrients to function properly. This article addresses how diet and eating habits can affect mental health. </p>
+    </div>
+    <div class="boxin2">
+      <img style="width: 100%;height: 50%;border-radius: 5px;"  src="https://newassets.apollo247.com/cms/2022-01/vaccinemix.jpg" alt="">
+       <p>COVID-19 Vaccines</p>
+       <h5>Mixing Vaccines Could Boost Efficacy, Research Indicates </h5>
+       <p>While both Covaxin and Covishield have proven their efficacy individually, a recent study has shown that the mix of both vaccines could be more effective against COVID-19 infection. </p>
+    </div>
+    <div class="boxin2">
+      <img style="width: 100%;height: 50%;border-radius: 5px;" src="	https://newassets.apollo247.com/cms/2022-01/omicrondetailpage.jpg" alt="">
+      <p>Coronavirus Updates</p>
+      <h5>Omicron Fact File: All You Need to Know</h5>
+      <p>Omicron is a variant of the SARS-CoV-2 virus with 32 mutations, which make the attachment of the coronavirus spike protein to human cells easier.</p>
+    </div>
+  </div>
+</div>
+</div>
+<!-- <br> -->
+
+<!-- <div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div> -->
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html> 
